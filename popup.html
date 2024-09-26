@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Questions and Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Change font */
+      background-color: #f4f4f4; /* Light background color */
+      margin: 0;
+      padding: 20px;
+      width: 300px; /* Set width for the container */
+      height: auto; /* Allow height to adjust based on content */
+    }
+
+    #quiz {
+      background-color: white; /* White background for the quiz container */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+      padding: 10px; /* Padding inside the container */
+      margin: auto; /* Center the container */
+      max-height: 300px; /* Set maximum height for the quiz container */
+      overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    }
+
+    p {
+      font-size: 16px; /* Slightly decrease font size for questions */
+      margin: 5px 0; /* Reduce margin around questions */
+    }
+
+    label {
+      display: block; /* Display each radio button on a new line */
+      margin: 3px 0; /* Reduced margin around labels */
+      cursor: pointer; /* Pointer cursor for labels */
+    }
+
+    input[type="radio"] {
+      margin-right: 5px; /* Reduce space between radio button and label */
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz"></div> <!-- A container to hold all the questions and options -->
+
+  <script src="app.js"></script>
+</body>
+</html>
