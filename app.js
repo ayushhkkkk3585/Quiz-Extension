@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add the options as radio buttons
     quizItem.options.forEach((option) => {
       quizContainer.innerHTML += `
-        <label>
+        <label id="label-${questionIndex}-${option}">
           <input type="radio" name="question${questionIndex}" value="${option}">
           ${option}
         </label><br>
@@ -44,8 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Function to calculate and display the score
+// Function to calculate and display the score, and highlight answers
 document.getElementById("mybutton").addEventListener("click", submitQuiz);
+
 function submitQuiz() {
   let score = 0;
 
@@ -82,9 +83,27 @@ function submitQuiz() {
       `input[name="question${questionIndex}"]:checked`
     );
 
-    // Check if the selected option is correct
+    // Highlight correct and incorrect answers
+    quizItem.options.forEach((option) => {
+      const label = document.getElementById(`label-${questionIndex}-${option}`);
+
+      // Reset previous highlights
+      label.style.color = "black";
+
+      // Highlight correct answer in green
+      if (option === quizItem.correct) {
+        label.style.color = "green";
+      }
+
+      // If the selected option is incorrect, highlight it in red
+      if (selectedOption && selectedOption.value !== quizItem.correct && selectedOption.value === option) {
+        label.style.color = "red";
+      }
+    });
+
+    // Increment score if correct
     if (selectedOption && selectedOption.value === quizItem.correct) {
-      score++; // Increment score if correct
+      score++;
     }
   });
 

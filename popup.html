@@ -3,71 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Questions and Options</title>
+  <title>Quiz Extension</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
       width: 300px;
-      height: auto;
-    }
-
-    #quiz {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
       padding: 10px;
-      margin: auto;
-      max-height: 300px;
-      overflow-y: auto;
     }
 
-    p {
-      font-size: 16px;
-      margin: 5px 0;
-    }
-
-    label {
-      display: block;
-      margin: 3px 0;
-      cursor: pointer;
-    }
-
-    input[type="radio"] {
-      margin-right: 5px;
-    }
-
-    button {
-      display: block;
-      margin: 20px 0 0 0;
-      padding: 10px;
-      width: 100%;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
+    #quiz p {
+      font-weight: bold;
     }
 
     #score {
-      margin-top: 10px;
-      font-size: 18px;
+      margin-top: 20px;
+      font-size: 1.2em;
       font-weight: bold;
-      color: #333;
+    }
+
+    /* Styling for correct and incorrect answers */
+    label {
+      display: block;
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-  <div id="quiz"></div> <!-- A container to hold all the questions and options -->
-  <button id="mybutton">Submit</button>
-  <div id="score"></div> <!-- A container to display the score -->
+  <div id="quiz"></div>
+  <button id="mybutton">Submit Quiz</button>
+  <div id="score"></div>
 
- <script src="app.js"></script>
+  <script src="app.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
